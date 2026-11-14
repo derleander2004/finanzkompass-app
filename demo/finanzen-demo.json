@@ -1,0 +1,67 @@
+{
+  "format": "finanzkompass",
+  "version": 1,
+  "demo": true,
+  "stand": "2026-11-01",
+  "update_vorbereitung": ["Kontoumsätze als CSV in den Ordner „umsaetze“ legen"],
+
+  "einkommen": { "netto": 1800.00, "beschreibung": "Erfundene Beispielzahlen" },
+
+  "feste_ausgaben": [
+    { "name": "Miete", "betrag": 650.00, "rhythmus": "monatlich" },
+    { "name": "Strom und Internet", "betrag": 75.00, "rhythmus": "monatlich" },
+    { "name": "Handy", "betrag": 15.00, "rhythmus": "monatlich" },
+    { "name": "Versicherungen", "betrag": 45.00, "rhythmus": "monatlich" },
+    { "name": "Sportverein", "betrag": 30.00, "rhythmus": "monatlich" }
+  ],
+
+  "sparen": [
+    { "name": "Notgroschen", "betrag": 150.00, "ausfuehrung": "Dauerauftrag am 1." },
+    { "name": "ETF-Sparplan", "betrag": 100.00, "ausfuehrung": "am 5." }
+  ],
+
+  "variable_ausgaben": [
+    { "monat": "2026-08", "summe": 705 },
+    { "monat": "2026-09", "summe": 760 },
+    { "monat": "2026-10", "summe": 690, "posten": [ { "name": "Lebensmittel", "betrag": 310 }, { "name": "Freizeit", "betrag": 180 } ] }
+  ],
+
+  "konten": [
+    { "id": "giro", "name": "Girokonto", "zweck": "Gehalt und laufende Ausgaben", "stand": 420.00 },
+    { "id": "tagesgeld", "name": "Tagesgeld", "zweck": "Notgroschen", "stand": 1850.00, "zins": 2.0 }
+  ],
+
+  "notgroschen": {
+    "konto": "tagesgeld",
+    "ziel": 5000,
+    "untergrenze": 1500,
+    "rate": 150,
+    "geplant_bis": "2028-08",
+    "etappen": [
+      { "betrag": 1500, "name": "Untergrenze", "text": "Darunter nur echte Notfälle", "symbol": "schild" },
+      { "betrag": 2500, "name": "Halbzeit", "text": "Die Hälfte ist geschafft", "symbol": "halb" },
+      { "betrag": 4000, "name": "Viertausend", "text": "Endspurt", "symbol": "trend" },
+      { "betrag": 5000, "name": "Notgroschen voll", "text": "Ca. 3 Monatsausgaben", "symbol": "pokal" }
+    ]
+  },
+
+  "depot": {
+    "wert": 3200.00,
+    "positionen": [
+      { "rolle": "kern", "name": "Welt", "wertpapier": "Beispiel-Welt-ETF", "ter": 0.10, "zielanteil": 80, "sparplan": 80.00, "wert": 2500.00 },
+      { "rolle": "kern", "name": "Schwellenländer", "wertpapier": "Beispiel-Schwellenländer-ETF", "ter": 0.20, "zielanteil": 20, "sparplan": 20.00, "wert": 700.00 }
+    ]
+  },
+
+  "handlungsbedarf": [
+    { "titel": "Das sind Demo-Daten", "text": "Alle Zahlen sind erfunden. Importiere dein eigenes Datenpaket über das Menü oben rechts." }
+  ],
+
+  "termine": [
+    { "datum": "2030-01-01", "text": "Beispieltermin" }
+  ],
+
+  "serien": [ { "id": "sparrate", "name": "Sparrate eingehalten", "monate": 3, "seit": "2026-09" } ],
+
+  "abzeichen": [ { "name": "Erster Sparplan", "datum": "2026-09-05", "symbol": "saeulen" } ]
+}
